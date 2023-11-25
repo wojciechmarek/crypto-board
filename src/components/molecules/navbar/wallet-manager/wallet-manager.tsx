@@ -6,6 +6,7 @@ import { Menu, Transition } from "@headlessui/react";
 import React, { Fragment } from "react";
 
 type Props = {
+  address: string;
   onMenuItemClick: (id: string) => void;
   menuItems: {
     id: string;
@@ -15,10 +16,10 @@ type Props = {
 };
 
 export const WalletManager = (props: Props) => {
-  const { onMenuItemClick, menuItems } = props;
+  const { onMenuItemClick, menuItems, address } = props;
   return (
     <Menu as="div" className="relative inline-block text-left">
-      <ConnectedButton />
+      <ConnectedButton address={address} />
       <Transition
         as={Fragment}
         enter="transition ease-out duration-100"

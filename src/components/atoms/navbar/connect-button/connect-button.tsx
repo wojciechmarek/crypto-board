@@ -1,18 +1,19 @@
 import React from "react";
 
 type Props = {
+  isConnecting: boolean;
   onWalletConnectButtonClick: () => void;
 };
 
 export const ConnectButton = (props: Props) => {
-  const { onWalletConnectButtonClick } = props;
+  const { isConnecting, onWalletConnectButtonClick } = props;
 
   return (
     <button
       className="px-4 h-8 bg-purple-700 text-sm font-bold rounded-lg"
       onClick={onWalletConnectButtonClick}
     >
-      Connect wallet
+      {isConnecting ? "Connecting..." : "Connect wallet"}
     </button>
   );
 };
