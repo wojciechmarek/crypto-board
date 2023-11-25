@@ -8,7 +8,7 @@ To practice the Next.js 14 framework and learn how to use crypto APIs (WalletCon
 
 ## Demo
 
-The live demo is available at [crypto-board-three.vercel.app](crypto-board-three.vercel.app).
+The live demo is available at [crypto-board-three.vercel.app](https://crypto-board-three.vercel.app).
 
 ## Screenshot
 
