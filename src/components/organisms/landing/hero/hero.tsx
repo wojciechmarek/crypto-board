@@ -11,7 +11,7 @@ export const Hero = (props: Props) => {
       </p>
       <a
         className="px-4 py-2 mt-6 text-white bg-purple-700 rounded-md"
-        href="/wallet"
+        href="/swap"
       >
         Run the application
       </a>

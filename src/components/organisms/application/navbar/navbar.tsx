@@ -6,6 +6,7 @@ import { ConnectButton, Logo } from "@cb/components/atoms/navbar";
 import { WalletManager } from "@cb/components/molecules/navbar";
 import { NavigationLinks } from "@cb/components/molecules/navbar/navigation-links";
 import { useWeb3Modal } from "@web3modal/wagmi/react";
+import { useAccount } from "wagmi";
 
 type Props = {};
 
@@ -23,17 +24,16 @@ const walletManagerMenuItems = [
 ];
 
 export const Navbar = (props: Props) => {
-  const [isWalletConnected, setIsWalletConnected] = useState(false);
-  const { open } = useWeb3Modal();
+  const { open, close } = useWeb3Modal();
+  const { address, isConnecting, isDisconnected } = useAccount();
 
   const handleWalletConnectButtonClick = () => {
-    // setIsWalletConnected(!isWalletConnected);
-    open();
+    open({ view: "Networks" });
   };
 
-  const handleWalletManagerMenuItemClick = (id: string) => {
+  const handleWalletManagerMenuItemClick = async (id: string) => {
     if (id === "logout") {
-      setIsWalletConnected(false);
+      await close();
     }
   };
 
@@ -48,14 +48,16 @@ export const Navbar = (props: Props) => {
         </div>
         <div className="w-48 flex items-center justify-end">
           <div className="flex items-center">
-            {isWalletConnected ? (
-              <WalletManager
-                menuItems={walletManagerMenuItems}
-                onMenuItemClick={handleWalletManagerMenuItemClick}
+            {isDisconnected ? (
+              <ConnectButton
+                isConnecting={isConnecting}
+                onWalletConnectButtonClick={handleWalletConnectButtonClick}
               />
             ) : (
-              <ConnectButton
-                onWalletConnectButtonClick={handleWalletConnectButtonClick}
+              <WalletManager
+                address={address?.toLocaleLowerCase() ?? ""}
+                menuItems={walletManagerMenuItems}
+                onMenuItemClick={handleWalletManagerMenuItemClick}
               />
             )}
           </div>
