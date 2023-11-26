@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 
 import {
-  BasicDetails,
+  ChartBasicDetails,
   ChartSettings,
   ChartView,
 } from "@cb/components/molecules/swap";
@@ -21,7 +21,7 @@ export const Chart = (props: Props) => {
 
   return (
     <section className="flex flex-col justify-between w-4/6">
-      <BasicDetails />
+      <ChartBasicDetails />
       <div className="flex flex-col gap-2">
         <ChartSettings
           chartType={chartType}

@@ -3,7 +3,7 @@ import React from "react";
 
 type Props = {};
 
-export const BasicDetails = (props: Props) => {
+export const ChartBasicDetails = (props: Props) => {
   return (
     <div className="flex items-end justify-between">
       <div className="flex gap-2 items-end">
