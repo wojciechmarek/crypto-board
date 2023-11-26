@@ -9,10 +9,22 @@ export const BasicDetails = (props: Props) => {
       <div className="flex gap-2 items-end">
         <div className="flex">
           <div className="h-16 w-16 bg-[#151D2A] rounded-full grid place-items-center">
-            <div className="h-14 w-14 bg-amber-400 rounded-full"></div>
+            <div className="h-14 w-14 bg-[#EA973D] rounded-full grid place-items-center">
+              <img
+                src="https://cryptologos.cc/logos/bitcoin-btc-logo.svg"
+                alt="BTC"
+                className="h-10 w-10"
+              />
+            </div>
           </div>
           <div className="h-16 w-16 bg-[#151D2A] rounded-full grid place-items-center relative -left-6">
-            <div className="h-14 w-14 bg-blue-400 rounded-full"></div>
+            <div className="h-14 w-14 bg-[#6780E3] rounded-full grid place-items-center">
+              <img
+                src="https://cryptologos.cc/logos/ethereum-eth-logo.svg"
+                alt="ETH"
+                className="h-10 w-10"
+              />
+            </div>
           </div>
         </div>
         <div className="flex flex-col">

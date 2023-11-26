@@ -12,9 +12,7 @@ The live demo is available at [crypto-board-three.vercel.app](https://crypto-boa
 
 ## Screenshot
 
-not yet
-
-<!-- ![subpacket - landing]() -->
+![demo1 - swap](./screenshots/demo1.png)
 
 ## Used technologies
 
@@ -22,7 +20,7 @@ not yet
 - 🌈 **Framework:** next.js 14
 - 🛠️ **Tools:** prettier, eslint, conventional commits
 - 🎨 **Styling:** tailwind
-- 💎 **Others:** react charts, react table, wallet connect, vercel pipeline
+- 💎 **Others:** charts.js, react table, wallet connect, vercel pipeline
 
 ## Wallet Connect
 

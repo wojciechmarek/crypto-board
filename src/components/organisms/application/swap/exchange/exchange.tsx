@@ -23,8 +23,12 @@ export const Exchange = (props: Props) => {
           <div className="relative flex flex-col mt-2 gap-1">
             <div className="flex items-center justify-between bg-[#151D2A] rounded-lg h-16 p-3">
               <div className="flex">
-                <div className="bg-amber-300 h-10 w-10 rounded-md grid place-items-center">
-                  BTC
+                <div className="bg-[#EA973D] h-10 w-10 rounded-md grid place-items-center">
+                  <img
+                    src="https://cryptologos.cc/logos/bitcoin-btc-logo.svg"
+                    alt="BTC"
+                    className="h-6 w-6"
+                  />
                 </div>
                 <div className="ml-4">
                   <p className="text-sm text-gray-400">Sell</p>
@@ -43,13 +47,17 @@ export const Exchange = (props: Props) => {
             </div>
             <div className="flex items-center justify-between bg-[#151D2A] rounded-lg h-16 p-3">
               <div className="flex">
-                <div className="bg-blue-600 h-10 w-10 rounded-md grid place-items-center">
-                  ADA
+                <div className="bg-[#6780E3] h-10 w-10 rounded-md grid place-items-center">
+                  <img
+                    src="https://cryptologos.cc/logos/ethereum-eth-logo.svg"
+                    alt="ETH"
+                    className="h-6 w-6"
+                  />
                 </div>
                 <div className="ml-4">
                   <p className="text-sm text-gray-400">Buy</p>
                   <p className="text-base font-semibold">
-                    BTC
+                    ETH
                     <span className="ml-1">
                       <ChevronDown className="inline-block w-4 h-4" />
                     </span>
@@ -74,7 +82,7 @@ export const Exchange = (props: Props) => {
         </div>
         <div className="mt-12 bg-[#28304B] rounded-b-xl flex justify-between p-6">
           <p>Total fee:</p>
-          <p className="font-semibold">6.23 ADA</p>
+          <p className="font-semibold">0.0012 ETH</p>
         </div>
       </div>
       <button className="bg-purple-700 rounded-xl py-4 flex items-center justify-center font-semibold">
