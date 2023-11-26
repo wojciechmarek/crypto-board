@@ -1,3 +1,5 @@
+"use client";
+
 import { Menu, Tab, Transition } from "@headlessui/react";
 import { CalendarClock } from "lucide-react";
 import { Fragment, useState } from "react";
