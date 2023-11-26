@@ -10,7 +10,7 @@ export const ConnectButton = (props: Props) => {
 
   return (
     <button
-      className="px-4 h-8 bg-purple-700 text-sm font-bold rounded-lg"
+      className="px-4 h-10 bg-purple-700 text-sm font-bold rounded-lg"
       onClick={onWalletConnectButtonClick}
     >
       {isConnecting ? "Connecting..." : "Connect wallet"}

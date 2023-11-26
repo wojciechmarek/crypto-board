@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 
 import {
   BasicDetails,
@@ -11,12 +11,23 @@ import {
 type Props = {};
 
 export const Chart = (props: Props) => {
+  const [chartType, setChartType] = useState<"Line" | "Area" | "Candle">(
+    "Area"
+  );
+
+  const handleChartTypeChange = (chartType: "Line" | "Area" | "Candle") => {
+    setChartType(chartType);
+  };
+
   return (
-    <section className="flex flex-col gap-6 w-4/6">
+    <section className="flex flex-col justify-between w-4/6">
       <BasicDetails />
-      <div className="mt-6 flex flex-col gap-4">
-        <ChartSettings />
-        <ChartView />
+      <div className="flex flex-col gap-2">
+        <ChartSettings
+          chartType={chartType}
+          onChartTypeChange={handleChartTypeChange}
+        />
+        <ChartView chartType={chartType} />
       </div>
     </section>
   );
