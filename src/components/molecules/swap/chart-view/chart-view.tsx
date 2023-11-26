@@ -64,8 +64,9 @@ export const ChartView = (props: Props) => {
         ],
         datasets: [
           {
-            data: [10, 21, 60, 44, 17, 21, 17],
-            label: "Pending",
+            data: Array.from({ length: 40 }, () => Math.random() * 100),
+            // label: "Pending",
+            label: undefined,
             borderColor: "#7331C7",
             backgroundColor: gradientFill,
             tension: 0.5,
