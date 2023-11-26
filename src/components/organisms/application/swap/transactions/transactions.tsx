@@ -14,20 +14,20 @@ const types = ["All", "Pending", "Completed"];
 type Transaction = {
   buy: {
     icon: string;
-    amount: number;
+    amount: string;
     currency: string;
   };
   sell: {
     icon: string;
-    amount: number;
+    amount: string;
     currency: string;
   };
   price: {
-    amount: number;
+    amount: string;
     currency: string;
   };
   fee: {
-    amount: number;
+    amount: string;
     currency: string;
   };
   time: string;
