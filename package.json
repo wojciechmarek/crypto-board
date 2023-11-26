@@ -11,10 +11,10 @@
   "dependencies": {
     "@headlessui/react": "^1.7.17",
     "@web3modal/wagmi": "^3.3.2",
+    "chart.js": "^4.4.0",
     "lucide-react": "^0.293.0",
     "next": "14.0.3",
     "react": "^18",
-    "react-charts": "^3.0.0-beta.57",
     "react-dom": "^18",
     "viem": "^1.19.9",
     "wagmi": "^1.4.7"
