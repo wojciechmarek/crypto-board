@@ -28,7 +28,12 @@ ChartJs.register(
 
 export const ChartView = (props: Props) => {
   useEffect(() => {
-    var ctx = document.getElementById("myChart").getContext("2d");
+    const element = document.getElementById("myChart") as HTMLCanvasElement;
+    const ctx = element.getContext("2d");
+
+    if (!ctx) {
+      return;
+    }
 
     // https://blog.vanila.io/chart-js-tutorial-how-to-make-gradient-line-chart-af145e5c92f9
     var gradientFill = ctx.createLinearGradient(0, 10, 0, 300);
