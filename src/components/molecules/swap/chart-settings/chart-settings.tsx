@@ -109,7 +109,6 @@ export const ChartSettings = (props: Props) => {
               onClick={() => onChartTypeChange(type as any)}
               className={clsx(
                 "rounded-lg p-2 w-16 text-sm font-medium leading-5",
-                "ring-white/60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2",
                 type === chartType
                   ? "bg-violet-700 shadow"
                   : "hover:bg-violet-700/[0.12] hover:text-white"
