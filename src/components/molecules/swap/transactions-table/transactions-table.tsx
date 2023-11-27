@@ -157,7 +157,10 @@ export const TransactionsTable = (props: Props) => {
         </thead>
         <tbody className="bg-[#21273E]">
           {table.getRowModel().rows.map((row) => (
-            <tr key={row.id} className="border-b-[1px] border-[#29304C]">
+            <tr
+              key={row.id}
+              className="border-b-[1px] border-[#29304C] hover:bg-[#28304B]"
+            >
               {row.getVisibleCells().map((cell) => (
                 <td key={cell.id} className="py-3 px-2 text-start">
                   {flexRender(cell.column.columnDef.cell, cell.getContext())}

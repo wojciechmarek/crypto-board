@@ -8,7 +8,7 @@ type Props = {};
 
 const types = ["All", "Pending", "Completed"];
 
-const tableData = Array.from({ length: 30 }, (k, i) => ({
+const tableDataList = Array.from({ length: 30 }, (k, i) => ({
   buy: {
     icon: "https://cryptologos.cc/logos/bitcoin-btc-logo.png",
     amount: (Math.random() * 10).toFixed(1),
@@ -34,11 +34,32 @@ const tableData = Array.from({ length: 30 }, (k, i) => ({
 }));
 
 export const Transactions = (props: Props) => {
+  const [selectedTransactionType, setSelectedTransactionType] =
+    React.useState("All");
+
+  const [tableData, setTableData] = React.useState(tableDataList);
+
+  const handleTransactionTypeClick = (type: string) => {
+    setSelectedTransactionType(type);
+
+    if (type === "All") {
+      setTableData(tableDataList);
+    } else if (type === "Pending") {
+      setTableData(tableDataList.filter((data) => data.status === "Pending"));
+    } else if (type === "Completed") {
+      setTableData(tableDataList.filter((data) => data.status === "Completed"));
+    }
+  };
+
   return (
     <section className="flex flex-col">
       <div className="flex gap-12 items-center">
         <p className="font-bold text-lg ml-2">My Orders</p>
-        <TransactionsSettings transactionTypes={types} />
+        <TransactionsSettings
+          transactionTypes={types}
+          selectedTransactionType={selectedTransactionType}
+          onTransactionTypeClick={handleTransactionTypeClick}
+        />
       </div>
       <div className="mt-2">
         <TransactionsTable data={tableData} />
